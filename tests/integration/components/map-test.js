@@ -110,7 +110,7 @@ module('Integration | Component | map', function (hooks) {
   });
 
   test('the default alt attribute can be overridden', async function (assert) {
-     await render(hbs`<Map
+    await render(hbs`<Map
        @lat="37.7797"
        @lng="-122.4184"
        @zoom="10"
@@ -119,11 +119,11 @@ module('Integration | Component | map', function (hooks) {
        alt="A map of San Francisco"
      />`);
 
-     assert.dom('.map img').hasAttribute('alt', 'A map of San Francisco');
-   });
+    assert.dom('.map img').hasAttribute('alt', 'A map of San Francisco');
+  });
 
-   test('the src, width and height attributes cannot be overridden', async function (assert) {
-     await render(hbs`<Map
+  test('the src, width and height attributes cannot be overridden', async function (assert) {
+    await render(hbs`<Map
        @lat="37.7797"
        @lng="-122.4184"
        @zoom="10"
@@ -134,10 +134,10 @@ module('Integration | Component | map', function (hooks) {
        height="300"
      />`);
 
-     assert
-       .dom('.map img')
-       .hasAttribute('src', /^https:\/\/api\.mapbox\.com\//)
-       .hasAttribute('width', '150')
-       .hasAttribute('height', '120');
-   });
- });
+    assert
+      .dom('.map img')
+      .hasAttribute('src', /^https:\/\/api\.mapbox\.com\//)
+      .hasAttribute('width', '150')
+      .hasAttribute('height', '120');
+  });
+});
