@@ -47,5 +47,8 @@ module.exports = function (environment) {
     // here you can enable a production-specific feature
   }
 
+  ENV.MAPBOX_ACCESS_TOKEN =
+    'pk.eyJ1Ijoiand1ZGV2IiwiYSI6ImNrdWltMmhtMTJwYXoycm84ODZqeXRqNXcifQ.HACNVL57WVZo2xqtj2lOAw';
+
   return ENV;
 };
