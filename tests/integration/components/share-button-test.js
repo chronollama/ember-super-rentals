@@ -10,7 +10,6 @@ class MockRouterService extends Service {
   }
 }
 
-
 module('Integration | Component | share-button', function (hooks) {
   setupRenderingTest(hooks);
 
